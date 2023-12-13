@@ -14,7 +14,7 @@ img {
 	display: block;
     height: 100%;
     width: 100%;
-	object-fit: contain;
+	object-fit: cover;
     width: 264px;
     height: 260px;
 }
@@ -112,12 +112,27 @@ ul {
 
 .link:hover {
     color: #404BBF;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .link:focus {
     color: #404BBF;
     text-decoration: underline;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+
+ .link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    text-decoration: underline;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
 
 .page-header .container {
     display: flex;
@@ -190,10 +205,14 @@ margin: 0 auto;
 
 .button:hover {
     background-color: #404BBF;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:focus {
     background-color: #404BBF;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list li {
@@ -260,6 +279,7 @@ p {
 
 .team-list .team {
     list-style-type: none; 
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-element {
@@ -274,8 +294,35 @@ p {
 }
 .team-element p {
     text-align: center;
+    margin-bottom: 8px;
 }
 
+.team-element .social-icons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.team-element svg {
+    margin: 0 auto;
+    fill: #FFF;
+}
+
+.social-icons .si {
+    display: flex;
+    background-color: #4D5AE5;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    align-items: center;
+    transition-property: background-color;
+}
+
+.si:hover {
+    background-color: #404BBF;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /*Четверта секція, ПОРТФОЛІО*/
 
@@ -307,6 +354,11 @@ p {
     align-items: stretch;
     flex-shrink: 0;
     width: calc((100% - 48px) / 3);
+
+.port-service-element:hover {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .port-service-element {
@@ -319,20 +371,35 @@ p {
     margin-bottom: 8px;
 }
 
+.port-img {
+    display: block;
+    padding: 0 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+}
+
 
 /*ФУТЕР*/
                                                         
 
 .down-page {
+    display: flex;
     background-color: #2e2f42;
     padding: 100px 0;
     width: 1440px;
     height: 312px;
     flex-shrink: 0;
+    gap: 140px;
 }
 
 .down-page .container {
     display: inline-block;
+    margin: 0;
+}
+
+.down-page .container:first-child {
     margin-left: 156px;
 }
 
@@ -367,4 +434,37 @@ p {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+  .down-page .container .social-icons {
+    display: flex;
+    fill: #FFF;
+    gap: 16px;
+  }
+
+  .down-page .container p {
+    color: #FFF;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.32px;
+margin-bottom: 16px;
+margin-top: 0;
+  }
+
+  .down-page .container .social-icons .si {
+    display: flex;
+    text-align: center;
+  }
+
+  .down-page .container .social-icons svg {
+    margin: 0 auto;
+  }
+
+  .down-page .container .social-icons .si:hover,   .down-page .container .social-icons .si:focus {
+    background-color: #31D0AA;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
