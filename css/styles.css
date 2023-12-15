@@ -90,7 +90,7 @@ letter-spacing: 0.4px;
 }
 
 ul {
-
+    list-style-type: none;
     margin: 0;
     padding-left: 0;
     }
@@ -111,8 +111,8 @@ margin-right: 76px;
 color: #2e2f42;
 }
 
-.link {
-    color: #2E2F42;
+.header-link {
+    color: #404bbf;
     font-weight: 500;
     letter-spacing: 0.32px;
     text-decoration: none;
@@ -157,7 +157,7 @@ color: #2e2f42;
     font-style: normal;
 }
 
-.link:hover, .link:focus, .link:active {
+.header-link:hover, .header-link:focus, .header-link:active {
     color: #404BBF;
     }
 
@@ -165,10 +165,8 @@ color: #2e2f42;
     color: #404BBF;
     }    
 
-.link:active::after {
-    display: block;
+.header-link:focus::after {
     content: "";
-    color: #404bbf;
     position: absolute;
     transform: translateY(20px);
     left: 0;
