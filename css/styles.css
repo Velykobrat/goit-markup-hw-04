@@ -159,13 +159,18 @@ color: #2e2f42;
     font-style: normal;
 }
 
-.header-link:hover, .header-link:focus, .header-link:active {
+.header-link:hover, 
+.header-link:focus {
     color: #404BBF;
     }
 
-.link-cont:hover, .link-cont:focus, .link-cont:active {
+.link-cont:hover, .link-cont:focus {
     color: #404BBF;
     }    
+
+.header-link:active {
+    color: #404BBF;
+    }
 
 .header-link:active::after {
     content: "";
