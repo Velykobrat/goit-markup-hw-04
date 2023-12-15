@@ -165,9 +165,10 @@ color: #2e2f42;
     color: #404BBF;
     }    
 
-.link:focus::after {
+.link:active::after {
     display: block;
     content: "";
+    color: #404bbf;
     position: absolute;
     transform: translateY(20px);
     left: 0;
