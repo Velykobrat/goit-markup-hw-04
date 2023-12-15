@@ -132,7 +132,7 @@ margin-right: 76px;
     color: #404BBF;
 }
 
-.header-link.riska::after {
+.riska::after {
     content: "";
     position: absolute;
     transform: translateY(20px);
