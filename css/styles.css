@@ -78,6 +78,11 @@ letter-spacing: 0.4px;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
+.container .navigation {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
 color: #4D5AE5;
 font-family: "Raleway", sans-serif;
@@ -86,7 +91,7 @@ font-weight: 700;
 line-height: 1.17;
 letter-spacing: 0.54px;
 text-transform: uppercase;
-text-decoration: none;
+text-decoration: none;  
 margin-right: 76px;
 }
 
@@ -94,12 +99,17 @@ margin-right: 76px;
 color: #2e2f42;
 }
 
-.nav-list .link {
-color: #2E2F42;
-font-weight: 500;
-letter-spacing: 0.32px;
-text-decoration: none;
-align-items: center;
+.nav-list-item .link {
+    color: #2E2F42;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+    text-decoration: none;
+    align-items: center;
+}
+
+.nav-list-item {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts ul a {
@@ -124,7 +134,7 @@ ul {
     text-decoration: underline;
     }
 
- .link:after {
+    .nav-list-item .link:hover::after {
     content: "";
     position: absolute;
     left: 0;
@@ -132,7 +142,7 @@ ul {
     height: 4px;
     background-color: #404bbf;
     border-radius: 2px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
 .page-header .container {
@@ -144,6 +154,9 @@ ul {
     list-style-type: none;
     display: flex;
     gap: 40px;
+    align-items: center;
+    max-width: 261px;
+    margin-right: 332px;
     align-items: center;
     position: relative;
     color: #404bbf;
@@ -157,20 +170,8 @@ ul {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.container .navigation {
-    display: flex;
-    align-items: center;
-}
-
-.container .nav-list {
-    max-width: 261px;
-    margin-right: 332px;
-    align-items: center;
-}
-
-
-.list {
-    padding: 24px 0;
+.nav-contacts-item {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts {
@@ -346,6 +347,7 @@ border-radius: 0px 0px 4px 4px;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .si-circle:hover,  .si-circle:focus {
